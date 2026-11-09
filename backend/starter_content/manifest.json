@@ -1,0 +1,135 @@
+{
+  "modes": [
+    {
+      "id": "consult",
+      "label": "Юридическая консультация",
+      "file": "modes/consult.md"
+    },
+    {
+      "id": "ad_check",
+      "label": "Проверка рекламы",
+      "file": "modes/ad_check.md"
+    },
+    {
+      "id": "document_gen",
+      "label": "Работа с документами",
+      "file": "modes/document_gen.md"
+    },
+    {
+      "id": "regulation",
+      "label": "Внутренние регламенты",
+      "file": "modes/regulation.md"
+    },
+    {
+      "id": "presentation",
+      "label": "Презентация для бизнеса",
+      "file": "modes/presentation.md"
+    }
+  ],
+  "skills": [
+    {
+      "name": "Чек-листы проверки рекламы ЛС/БАД/Косметика",
+      "mode": "ad_check",
+      "scenario_ids": [
+        "ad_check_general"
+      ],
+      "activation_condition": "always",
+      "priority": 50,
+      "file": "skills/ad-checklist.md"
+    },
+    {
+      "name": "Подготовка юридических документов",
+      "mode": "document_gen",
+      "scenario_ids": [
+        "claim_drafting",
+        "notice_drafting",
+        "document_from_contract",
+        "contract_analysis"
+      ],
+      "activation_condition": "always",
+      "priority": 60,
+      "file": "skills/document-preparation.md"
+    },
+    {
+      "name": "Навигатор по типовым формам",
+      "mode": "all",
+      "scenario_ids": [
+        "template_form_navigation",
+        "legal_consultation",
+        "contract_analysis"
+      ],
+      "activation_condition": "keyword:типовая форм|шаблон|образец|форму договор|форма договор|форме договор|формы договор|какой документ|как оформить|типовые форм|типовую форм|типовой форм|типовых форм",
+      "priority": 80,
+      "file": "skills/form-navigation.md"
+    },
+    {
+      "name": "Внутренние ресурсы компании",
+      "mode": "all",
+      "scenario_ids": [
+        "legal_consultation",
+        "regulation_lookup",
+        "contract_analysis",
+        "template_form_navigation"
+      ],
+      "activation_condition": "always",
+      "priority": 60,
+      "file": "skills/internal-resources.md"
+    },
+    {
+      "name": "claim-templates",
+      "mode": "document_gen",
+      "scenario_ids": [
+        "claim_drafting",
+        "consumer_return_claim",
+        "document_from_contract"
+      ],
+      "activation_condition": "always",
+      "priority": 50,
+      "file": "skills/claim-templates.md"
+    },
+    {
+      "name": "notice-templates",
+      "mode": "document_gen",
+      "scenario_ids": [
+        "notice_drafting",
+        "document_from_contract"
+      ],
+      "activation_condition": "always",
+      "priority": 50,
+      "file": "skills/notice-templates.md"
+    },
+    {
+      "name": "Возврат и замена товара потребителю",
+      "mode": "all",
+      "scenario_ids": [
+        "consumer_return_claim",
+        "claim_drafting"
+      ],
+      "activation_condition": "always",
+      "priority": 50,
+      "file": "skills/consumer-returns.md"
+    },
+    {
+      "name": "О возможностях ассистента",
+      "mode": "all",
+      "scenario_ids": null,
+      "activation_condition": "always",
+      "priority": 10,
+      "file": "skills/about.md"
+    },
+    {
+      "name": "Каталог документов и типовых форм",
+      "mode": "all",
+      "scenario_ids": [
+        "legal_consultation",
+        "regulation_lookup",
+        "contract_analysis",
+        "template_form_navigation",
+        "document_from_contract"
+      ],
+      "activation_condition": "always",
+      "priority": 65,
+      "file": "skills/document-catalog.md"
+    }
+  ]
+}

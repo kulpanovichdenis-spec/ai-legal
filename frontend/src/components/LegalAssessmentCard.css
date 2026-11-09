@@ -1,0 +1,162 @@
+.lac-card {
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--bg-surface);
+  box-shadow: var(--shadow);
+  margin: 0 0 14px;
+  overflow: hidden;
+  font-size: 13px;
+  max-width: 700px;
+}
+
+/* ── Verdict colour variants ── */
+.lac-ok    { border-left: 3px solid var(--success); }
+.lac-warning { border-left: 3px solid var(--warning); }
+.lac-danger  { border-left: 3px solid var(--danger); }
+
+/* ── Header (clickable strip) ── */
+.lac-header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 14px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  font-size: 13px;
+  color: var(--text);
+  flex-wrap: wrap;
+}
+
+.lac-header:hover {
+  background: var(--bg-elevated);
+}
+
+.lac-ok    .lac-icon { color: var(--success); }
+.lac-warning .lac-icon { color: var(--warning); }
+.lac-danger  .lac-icon { color: var(--danger); }
+
+.lac-icon {
+  font-size: 15px;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.lac-title {
+  font-weight: 600;
+  font-size: 12.5px;
+  color: var(--text-muted);
+  flex-shrink: 0;
+}
+
+.lac-verdict-label {
+  font-weight: 700;
+  font-size: 12.5px;
+}
+
+.lac-ok    .lac-verdict-label { color: var(--success); }
+.lac-warning .lac-verdict-label { color: var(--warning); }
+.lac-danger  .lac-verdict-label { color: var(--danger); }
+
+.lac-risk-badge {
+  padding: 1px 7px;
+  border-radius: 10px;
+  font-size: 11px;
+  font-weight: 600;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  color: var(--text-muted);
+}
+
+.lac-danger .lac-risk-badge {
+  background: var(--danger-soft);
+  border-color: rgba(192, 32, 48, 0.25);
+  color: var(--danger);
+}
+
+.lac-warning .lac-risk-badge {
+  background: var(--warning-soft);
+  border-color: rgba(185, 109, 0, 0.25);
+  color: var(--warning);
+}
+
+.lac-degraded-note {
+  font-size: 10px;
+  color: var(--text-dim);
+  font-style: italic;
+  padding: 1px 5px;
+  background: var(--bg-elevated);
+  border-radius: 6px;
+  border: 1px solid var(--border);
+}
+
+.lac-chevron {
+  margin-left: auto;
+  font-size: 10px;
+  color: var(--text-dim);
+  flex-shrink: 0;
+}
+
+/* ── Body ── */
+.lac-body {
+  border-top: 1px solid var(--border);
+  padding: 10px 16px 12px;
+}
+
+.lac-section {
+  margin-bottom: 10px;
+}
+
+.lac-section:last-of-type {
+  margin-bottom: 0;
+}
+
+.lac-section-title {
+  font-size: 10.5px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--text-dim);
+  margin-bottom: 6px;
+}
+
+.lac-list {
+  margin: 0;
+  padding-left: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.lac-list li {
+  font-size: 12.5px;
+  line-height: 1.45;
+  color: var(--text);
+}
+
+.lac-list-risks li::marker {
+  color: var(--danger);
+}
+
+.lac-list-recs li::marker {
+  color: var(--success);
+}
+
+/* ── Disclaimer ── */
+.lac-disclaimer {
+  margin-top: 10px;
+  padding-top: 8px;
+  border-top: 1px solid var(--border);
+  font-size: 11px;
+  color: var(--text-dim);
+  line-height: 1.5;
+  font-style: italic;
+}
+
+.lac-disclaimer-collapsed {
+  border-top: 1px solid var(--border);
+  padding: 5px 16px;
+  margin-top: 0;
+}

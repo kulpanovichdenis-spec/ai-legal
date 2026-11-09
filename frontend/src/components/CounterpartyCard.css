@@ -1,0 +1,319 @@
+.cc-card {
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--bg-surface);
+  box-shadow: var(--shadow);
+  margin: 4px 0 14px;
+  overflow: hidden;
+  font-size: 13px;
+  max-width: 700px;
+}
+
+/* ── Header ── */
+.cc-header {
+  padding: 12px 16px 10px;
+  border-bottom: 1px solid var(--border);
+}
+
+.cc-opf-badge {
+  display: inline-block;
+  padding: 1px 7px;
+  border-radius: 4px;
+  background: var(--sky-soft);
+  color: var(--sky);
+  font-size: 11px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.cc-name {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text);
+  line-height: 1.35;
+}
+
+.cc-ids {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 6px;
+  font-size: 12px;
+  color: var(--text-dim);
+}
+
+.cc-ids b {
+  color: var(--text-muted);
+  font-weight: 600;
+  margin-right: 2px;
+}
+
+/* ── Verdict strip ── */
+.cc-verdict {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 16px;
+  font-size: 12.5px;
+  font-weight: 600;
+  flex-wrap: wrap;
+}
+
+.cc-verdict-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.cc-verdict-status,
+.cc-verdict-age,
+.cc-verdict-emp {
+  font-weight: 400;
+  opacity: 0.9;
+}
+
+/* ── Alert banners ── */
+.cc-alert {
+  padding: 7px 16px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.cc-alert-danger {
+  background: var(--danger-soft);
+  color: var(--danger);
+  border-top: 1px solid rgba(192, 32, 48, 0.15);
+}
+
+.cc-alert-warning {
+  background: var(--warning-soft);
+  color: var(--warning);
+  border-top: 1px solid rgba(185, 109, 0, 0.15);
+}
+
+/* ── Key metrics ── */
+.cc-metrics {
+  padding: 8px 16px;
+  border-top: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.cc-metric-row {
+  display: grid;
+  grid-template-columns: 130px 1fr;
+  gap: 8px;
+  font-size: 12.5px;
+}
+
+.cc-metric-label {
+  color: var(--text-dim);
+  font-weight: 500;
+}
+
+.cc-metric-value {
+  color: var(--text);
+}
+
+/* ── Details (dates, contacts) ── */
+.cc-details {
+  padding: 7px 16px 8px;
+  border-top: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.cc-detail-row {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  font-size: 12px;
+  color: var(--text);
+  flex-wrap: wrap;
+}
+
+.cc-detail-label {
+  color: var(--text-dim);
+  font-weight: 500;
+  min-width: 130px;
+  flex-shrink: 0;
+}
+
+.cc-detail-secondary {
+  color: var(--text-dim);
+}
+
+/* ── Generic section ── */
+.cc-section {
+  padding: 8px 16px;
+  border-top: 1px solid var(--border);
+}
+
+.cc-section-title {
+  font-size: 10.5px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--text-dim);
+  margin-bottom: 7px;
+}
+
+/* ── OKVED ── */
+.cc-okved-main {
+  font-size: 12.5px;
+  color: var(--text);
+  margin-bottom: 5px;
+}
+
+.cc-okved-extra {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin-top: 4px;
+}
+
+.cc-okved-chip {
+  padding: 2px 8px;
+  border-radius: 10px;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  font-size: 11px;
+  color: var(--text-muted);
+}
+
+.cc-expand-btn {
+  background: none;
+  border: none;
+  color: var(--accent);
+  font-size: 11px;
+  cursor: pointer;
+  padding: 2px 4px;
+  font-weight: 600;
+}
+
+.cc-expand-btn:hover {
+  text-decoration: underline;
+}
+
+/* ── Founders ── */
+.cc-founder-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12.5px;
+  padding: 4px 0;
+  color: var(--text);
+}
+
+.cc-founder-row + .cc-founder-row {
+  border-top: 1px solid var(--border);
+}
+
+.cc-founder-name {
+  flex: 1;
+}
+
+.cc-founder-share {
+  font-weight: 600;
+  color: var(--text-muted);
+  flex-shrink: 0;
+}
+
+.cc-invalid-badge {
+  padding: 1px 6px;
+  border-radius: 4px;
+  background: var(--danger-soft);
+  color: var(--danger);
+  font-size: 10px;
+  font-weight: 700;
+  cursor: default;
+  flex-shrink: 0;
+}
+
+/* ── Financials ── */
+.cc-fin-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 7px;
+  margin-bottom: 7px;
+}
+
+.cc-fin-item {
+  background: var(--bg-elevated);
+  border-radius: var(--radius-sm);
+  padding: 6px 10px;
+}
+
+.cc-fin-item-debt {
+  background: var(--danger-soft);
+}
+
+.cc-fin-label {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+  color: var(--text-dim);
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+
+.cc-fin-value {
+  font-size: 12.5px;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.cc-fin-item-debt .cc-fin-value {
+  color: var(--danger);
+}
+
+.cc-fin-tax {
+  font-size: 11.5px;
+  color: var(--text-dim);
+  margin-top: 2px;
+}
+
+/* ── Licenses ── */
+.cc-license {
+  font-size: 12px;
+  color: var(--text);
+  padding: 3px 0;
+  border-top: 1px solid var(--border);
+  line-height: 1.4;
+}
+
+.cc-license:first-child {
+  border-top: none;
+}
+
+/* ── OKVED primary display ── */
+.cc-okved-code {
+  font-weight: 700;
+  color: var(--text-muted);
+}
+
+.cc-okved-name {
+  color: var(--text);
+}
+
+/* ── Address in metrics (can be long) ── */
+.cc-metric-address {
+  word-break: break-word;
+}
+
+/* ── Footer ── */
+.cc-footer {
+  padding: 5px 16px;
+  background: var(--bg-elevated);
+  border-top: 1px solid var(--border);
+  font-size: 11px;
+  color: var(--text-dim);
+}
+
+.cc-footer-degraded {
+  color: var(--warning);
+  font-style: italic;
+}
